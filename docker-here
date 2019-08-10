@@ -1,0 +1,12 @@
+#!/bin/bash
+# create temp dockerfile
+
+docker build -t temporary -<<EOF
+FROM $1
+WORKDIR /workspace
+ENTRYPOINT [""]
+CMD ["bash"]
+EOF
+
+# launch container
+docker run -it -v $(pwd):/workspace temporary
