@@ -9,4 +9,4 @@ CMD ["bash"]
 EOF
 
 # launch container
-docker run -it -v $(pwd):/workspace temporary
+docker run -it -v $(pwd):/$2 temporary
