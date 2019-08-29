@@ -3,7 +3,7 @@
 
 docker build -t temporary -<<EOF
 FROM $1
-WORKDIR /workspace
+WORKDIR /$2
 ENTRYPOINT [""]
 CMD ["bash"]
 EOF
