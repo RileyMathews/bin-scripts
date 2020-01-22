@@ -3,10 +3,10 @@
 
 docker build -t temporary -<<EOF
 FROM $1
-WORKDIR /$2
+WORKDIR /workspace
 ENTRYPOINT [""]
 CMD ["bash"]
 EOF
 
 # launch container
-docker run -it -v $(pwd):/$2 temporary
+docker run -it -v $(pwd):/workspace temporary
